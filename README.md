@@ -1,2 +1,2 @@
 # learning-typescript
-A repository with typescript code of my learning path
+A repository with TypeScript code of my TypeScript learning path
