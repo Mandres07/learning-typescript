@@ -1,20 +1,15 @@
-function combine(input1, input2, resultType) {
-    var result;
-    if (typeof input1 === 'number' && typeof input2 === 'number' || resultType === 'as-number') {
-        result = +input1 + +input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    return result;
-    // if (resultType === 'as-number')
-    //    return +result;
-    // else
-    //    return result.toString();
+var userInput;
+var userName;
+userInput = 5;
+userInput = 'Mario';
+// userName = userInput;
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
-var combinedAges = combine(30, 26, 'as-number');
-console.log(combinedAges);
-var combinedStringAges = combine('30', '26', 'as-number');
-console.log(combinedStringAges);
-var combinedNames = combine('Mario', 'Judith', 'as-text');
-console.log(combinedNames);
+// Is better to use unkown than any to force you to check the type first
+// The never type
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
+}
+var result = generateError('An Error ocurred', 500);
+console.log(result);
