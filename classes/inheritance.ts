@@ -1,9 +1,9 @@
-class Department {
+class Department4 {
    private employees: string[] = [];
 
    constructor(private readonly id: string, private name: string) { }
 
-   describe(this: Department) {
+   describe(this: Department4) {
       console.log(`Department (${this.id}): ${this.name}`);
    }
 
@@ -17,7 +17,7 @@ class Department {
    }
 }
 
-class ITDepartment extends Department {
+class ITDepartment extends Department4 {
    admins: string[];
    constructor(id: string, admins: string[]) {
       super(id, 'IT'); // to execute the father lass constructor
@@ -25,7 +25,7 @@ class ITDepartment extends Department {
    }
 }
 
-class AccountingDepartment extends Department {
+class AccountingDepartment extends Department4 {
    constructor(id: string, private reports: string[]) {
       super(id, 'Accounting'); // to execute the father lass constructor
    }
@@ -39,7 +39,7 @@ class AccountingDepartment extends Department {
    }
 }
 
-const sales = new Department('Sales', 'A1');
+const sales = new Department4('Sales', 'A1');
 sales.addEmployee('Mario');
 sales.addEmployee('Judith');
 sales.printEmployeeInformation();
